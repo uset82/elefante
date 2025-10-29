@@ -1,0 +1,67 @@
+When a model is imported from Blender into Bambu Studio, it often appears considerably 
+smaller than intended. This size discrepancy arises from the differing metric unit scales 
+employed by each software application. The model must therefore be resized to i ts 
+appropriate dimensions immediately after import to ensure accurate proportions. 
+Performing this adjustment prior to any further modifications guarantees that subsequent 
+edits, print configurations, and slicing operations preserve dimensional accuracy an d 
+result in a successful 3D printing process.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+I encountered this error repeatedly after reducing the size.  
+ 
+ 
+Before scaling the model to its intended real -world dimensions, it is essential to first 
+separate the hat from the elephant using Bambu Studio’s cutting tools. This preparatory 
+
+
+step allows for greater precision and flexibility during the scaling process. By isolating the 
+two components, each can be individually adjusted to ensure accurate proportions and 
+optimal alignment. Moreover, separating the model enhances print efficiency,  as it enables 
+tailored settings for each part —such as support placement, orientation, and print 
+resolution. Utilizing the cut tools in this manner ensures a clean and controlled division, 
+maintaining the structural integrity and visual fidelity of both th e hat and the elephant in 
+their independent forms.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+BLENDER SCALING   
+ 
+ 
+In Blender 3D modeling software, the wrench icon located on the right -hand side of the 
+interface represents the Modifiers  system, a core feature that enables non -destructive 
+alterations to an object's geometry. Within this system, the Generate  category provides a 
+range of tools designed to streamline model creation and modification.  
+Among these tools, the Boolean modifier stands out for its precision and versatility. It 
+operates based on Boolean logic, allowing one object to be used as a reference to cut, join, 
+or intersect with another. In practical application, a designer may employ the Boolean 
+
+
+modifier to subtract one mesh from another, creating cavities, engravings, or openings 
+within a model.  
+For instance, when applied to an elephant model with a smaller internal object serving as 
+the operand, the Boolean modifier can perform a Difference  operation that removes 
+intersecting geometry. This process produces a smooth internal cavity, effectively 
+transforming a solid elephant model into a hollow structure, such as an “elephant kettle.” 
+The Boolean modifier therefore serves as a powerful tool f or achieving complex geometric 
+modifications efficiently while maintaining flexibility for further adjustments.  
+ 
+ 
+ 
+ 
+After several adjustments and troubleshooting stages, the elephant and hat models were 
+successfully positioned and prepared for the final 3D printing process.  

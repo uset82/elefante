@@ -1,0 +1,92 @@
+   
+ 
+   
+ Mockup Assignment – Automatic Watering Elephant Project  
+Concept and Intent  
+This project proposes a playful, functional design for a portable automatic watering system 
+tailored for indoor plants in Norway, using an avocado plant as the test case. The system 
+integrates soil moisture sensing, ambient temperature and humidity monitor ing, and time -
+based control (RTC) to dispense water in short pulses, avoiding overwatering. To 
+communicate the concept in an engaging way and conceal the electronics, the design takes 
+the form of a sitting elephant watering can. A detachable top hat houses  the electronics and 
+user interface (LCD and buttons), while the elephant’s trunk doubles as a water outlet.  
+1. How I Planned and Made the Mockup (Process)  
+Ideation and Research  
+The initial idea was to create a simple pot. After discussing with my daughter, I switched to 
+a more playful elephant figure, which better communicates the project’s friendly and 
+interactive character, though it made the 3D modelling process more challengi ng. I 
+researched microcontrollers (Arduino), capacitive soil moisture sensors, DHT11, RTC 
+modules, LCD displays, and small water pumps to define electronic components and system 
+layout.  
+Form Exploration  
+Due to the short delivery timeline and after conducting deeper research, I decided to 
+generate the elephant concept using MakerWorld’s MakerLab Image -to-3D tool, which 
+converted the image generated in Gemini Nano Banana into a 3D mesh. This provided a 
+solid starting point for further refinement.  
+ 
+Figure 1: the elephant and detachable hat  generated in Gemini .  
+ 
+
+
+   
+ 
+   
+ CAD Progress  
+I imported the mesh into Fusion 360 for geometric inspection and splitting. The elephant 
+was separated from the top hat to allow modular assembly. Blender was used to create 
+internal cavities for the electronics and to reduce mesh size (via decimation) so that Fusion 
+could process it. Registration features ensure the hat aligns properly with the elephant’s 
+head.  
+ 
+Figure 2: MakerWorld interface showing the generation of the elephant 3D model from an 
+image.  
+ 
+Figure 3: Fusion 360 CAD progress – elephant body and hat separated for modular design.  
+ 
+ 
+ 
+
+
+   
+ 
+   
+ Mockup Strategy  
+The mockup consists of non -functional shells showing assembly and internal placement. 
+The elephant body includes a back cavity and cable grommet, while the detachable hat 
+provides housing for Arduino, battery, LCD, and buttons.  
+2. Slicer Setup (FDM Printing)  
+- Material: PLA (for easy finishing)  
+- Layer Height: 0.2 mm (0.16 mm for hat brim)  
+- Nozzle: 0.4 mm  
+- Walls: 3  
+- Top/Bottom Layers: 4  
+- Infill: 15 –20 % gyroid for strength and efficiency  
+- Supports: Tree supports for trunk underside and hat brim  
+- Orientation: Elephant body printed on its back; hat printed crown -down  
+- Bed Adhesion: Skirt, brim if required  
+3. Overcoming Physical Limitations  
+- Overhangs: The trunk and hat brim required tree supports and print reorientation to 
+reduce steep angles.  
+- Build Volume: The model exceeded printer dimensions (Bambu printer, 256 × 256 × 256 
+mm). To solve this, I scaled the model to ~60 –70% and split into two parts (body + hat).  
+- Hardware Limits: My laptop struggled with high -polygon meshes, so I used Blender for 
+mesh simplification and booleans, exporting lighter STL files into Fusion 360 for precision 
+edits.  
+4. Post -Processing Plan  
+- Sanding (220 → 400 grit)  
+- Filler primer application  
+- Wet sanding for smoother surfaces  
+- Metallic paint finish: aluminum or copper spray  
+- Optional: conductive copper/silver paint for light electroplating (hat only)  
+5. Outcome  
+The elephant body serves as a playful base with the trunk as the water outlet, while the top 
+hat cleanly integrates electronics and user interface. This design is ready for the next step: 
+integrating electronics and validating ergonomics before building th e functional prototype.  
+ 
+
+   
+ 
+   
+  
+Figure 4: 3D metallic render of the elephant and detachable hat.  
+ 

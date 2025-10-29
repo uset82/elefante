@@ -1,0 +1,99 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; fill: #111827; }
+      .subtitle { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; fill: #6b7280; }
+      .component-text { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; fill: #374151; }
+      .pin-text { font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 500; fill: #6b7280; }
+      .connection { stroke: #2563eb; stroke-width: 2; fill: none; }
+      .component { fill: #f3f4f6; stroke: #d1d5db; stroke-width: 1; }
+      .arduino { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .sensor { fill: #dcfce7; stroke: #059669; stroke-width: 1; }
+      .actuator { fill: #fef3c7; stroke: #d97706; stroke-width: 1; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Elephant Watering System Architecture</text>
+  <text x="400" y="60" text-anchor="middle" class="subtitle">Hardware Components &amp; Connections</text>
+  
+  <!-- Arduino Uno (Center) -->
+  <rect x="320" y="250" width="160" height="100" rx="8" class="arduino"/>
+  <text x="400" y="275" text-anchor="middle" class="component-text">Arduino Uno</text>
+  <text x="400" y="290" text-anchor="middle" class="component-text">Microcontroller</text>
+  
+  <!-- Pin Labels -->
+  <text x="330" y="310" class="pin-text">D2</text>
+  <text x="330" y="325" class="pin-text">A0</text>
+  <text x="330" y="340" class="pin-text">D8</text>
+  <text x="460" y="310" class="pin-text">5V</text>
+  <text x="460" y="325" class="pin-text">GND</text>
+  
+  <!-- DHT11 Temperature &amp; Humidity Sensor -->
+  <rect x="80" y="120" width="120" height="80" rx="6" class="sensor"/>
+  <text x="140" y="145" text-anchor="middle" class="component-text">DHT11</text>
+  <text x="140" y="160" text-anchor="middle" class="component-text">Temp &amp; Humidity</text>
+  <text x="140" y="175" text-anchor="middle" class="pin-text">Digital Pin D2</text>
+  
+  <!-- Soil Moisture Sensor -->
+  <rect x="80" y="380" width="120" height="80" rx="6" class="sensor"/>
+  <text x="140" y="405" text-anchor="middle" class="component-text">Soil Moisture</text>
+  <text x="140" y="420" text-anchor="middle" class="component-text">Analog Sensor</text>
+  <text x="140" y="435" text-anchor="middle" class="pin-text">Analog Pin A0</text>
+  
+  <!-- Servo Motor -->
+  <rect x="600" y="120" width="120" height="80" rx="6" class="actuator"/>
+  <text x="660" y="145" text-anchor="middle" class="component-text">Servo Motor</text>
+  <text x="660" y="160" text-anchor="middle" class="component-text">SG90</text>
+  <text x="660" y="175" text-anchor="middle" class="pin-text">PWM Pin D9</text>
+  
+  <!-- Relay Module -->
+  <rect x="600" y="280" width="120" height="60" rx="6" class="actuator"/>
+  <text x="660" y="305" text-anchor="middle" class="component-text">Relay Module</text>
+  <text x="660" y="320" text-anchor="middle" class="pin-text">Digital Pin D8</text>
+  
+  <!-- Water Pump -->
+  <rect x="600" y="380" width="120" height="80" rx="6" class="actuator"/>
+  <text x="660" y="405" text-anchor="middle" class="component-text">Water Pump</text>
+  <text x="660" y="420" text-anchor="middle" class="component-text">12V DC</text>
+  <text x="660" y="435" text-anchor="middle" class="pin-text">Via Relay</text>
+  
+  <!-- Connections -->
+  <!-- DHT11 to Arduino -->
+  <path d="M 200 160 Q 260 160 320 280" class="connection"/>
+  
+  <!-- Soil Moisture to Arduino -->
+  <path d="M 200 420 Q 260 380 320 320" class="connection"/>
+  
+  <!-- Arduino to Servo -->
+  <path d="M 480 280 Q 540 200 600 160" class="connection"/>
+  
+  <!-- Arduino to Relay -->
+  <path d="M 480 320 Q 540 320 600 310" class="connection"/>
+  
+  <!-- Relay to Pump -->
+  <path d="M 660 340 L 660 380" class="connection"/>
+  
+  <!-- Power connections (dashed) -->
+  <path d="M 480 310 Q 540 260 600 200" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <path d="M 480 325 Q 540 360 600 420" stroke="#374151" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="520" width="700" height="60" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="70" y="540" class="component-text">Legend:</text>
+  
+  <circle cx="120" cy="555" r="4" fill="#2563eb"/>
+  <text x="135" y="560" class="pin-text">Data Connection</text>
+  
+  <circle cx="250" cy="555" r="4" fill="#dc2626"/>
+  <text x="265" y="560" class="pin-text">Power (5V)</text>
+  
+  <circle cx="350" cy="555" r="4" fill="#374151"/>
+  <text x="365" y="560" class="pin-text">Ground</text>
+  
+  <text x="500" y="545" class="pin-text">Serial Output: 9600 baud</text>
+  <text x="500" y="560" class="pin-text">Format: temp,humidity,soil_adc,soil_pct,servo,pump</text>
+</svg>

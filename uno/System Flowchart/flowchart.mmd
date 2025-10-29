@@ -1,0 +1,18 @@
+flowchart TD
+  S((Start)) --> L[Main loop]
+  L --> C_DHT{DHT due: 2s elapsed}
+  C_DHT -->|yes| N_DHT[Read DHT11; update temperature and humidity]
+  C_DHT -->|no| N_Soil[Read A0 soil value]
+  N_DHT --> N_Soil
+  N_Soil --> N_Smooth[soilAvg = 0.9 soilAvg + 0.1 soilValue]
+  N_Smooth --> N_Stab[Update drySince and wetSince]
+  N_Stab --> C_ON{Pump OFF and dryStable and offTime >= 5s}
+  C_ON -->|yes| A_ON[Pump ON; relay HIGH; lastPumpToggle = now]
+  C_ON -->|no| C_OFF{Pump ON and wetStable and onTime >= 3s}
+  A_ON --> C_OFF
+  C_OFF -->|yes| A_OFF[Pump OFF; relay LOW; lastPumpToggle = now]
+  C_OFF -->|no| C_SAFE{Pump ON and onTime >= 10s}
+  A_OFF --> C_SAFE
+  C_SAFE -->|yes| A_OFF
+  C_SAFE -->|no| N_Out[Every 100ms: print metrics]
+  N_Out --> L

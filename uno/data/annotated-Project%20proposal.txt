@@ -1,0 +1,83 @@
+Project proposal  
+Automatic plant watering system for indoor use  
+1) What is it and what does it do?  
+A compact automatic irrigation system for home plants that reads soil moisture, ambient 
+temperature, and humidity, and then decides when to pump water using a simple sensor fusion 
+controlled by an Arduino Uno. It will record data, display readings on a sma ll LCD screen and 
+allow the user to activate or adjust the desired time and temperature with two buttons.  
+ 
+ 
+ 
+2) Why do I want to do this?  
+ 
+Given Norway's busy pace of life, even those who take care of their houseplants often overwater 
+or underwater them due to demanding routines and seasonal variations in light. The device aims 
+to keep humidity within a healthy band while reducing water use a nd user effort. It functions as a 
+learning platform that connects course modules in sensing, embedded systems, user interface, 
+sustainability, and manufacturing.  
+
+
+3) How big is it?  
+Target enclosure size of approximately 18 to 22 cm high, 12 to 16 cm wide, and 12 to 16 cm 
+deep. It's a 3D printed housing inspired by an elephant watering can with internal brackets for 
+electronics, pump, and piping. The final dimensions will be establish ed by placing the pump and 
+battery.  
+ 
+ 
+ 
+ 
+4) Is it portable?  
+Yes. It is powered by a rechargeable battery and can be charged from a small solar panel or a 
+five-volt supply. The energy -efficient suspension keeps power low between sensor readings. The 
+circuit will be inside the hat while the water and motor will be in side the elephant.  
+ 
+ 
+ 
+5) What material is it?  
+
+
+The elephant will be created with 3D filaments. Fasteners are screws instead of glue to support 
+repair and recycling.  
+ 
+6) Where do you live?  
+Inside next to a potted plant. The reservoir and tube are inside the printed body, so the device 
+looks like a decorative object rather than laboratory equipment.  
+7) Does it move?  
+Only the actuators move. A miniature pump drives the water and a small servo acts on a pinch 
+valve for more precise dosing. The base can optionally rotate for alignment, but the default 
+layout is static.  
+8) How do I interact with him?  
+A 16 -by-2 LCD display shows humidity percentage, temperature, humidity, and menu items. 
+One button activates manual watering and the other navigates settings such as thresholds, 
+watering window and display logs.  
+9) Can I divide the challenge into sub -challenges?  
+Yes. The work is naturally divided:  
+• Electronics & SensingCapacitive floor probe, DHT11, real -time clock, safe pump 
+drive, servo control.  
+• Firmware & ControlProbe calibration, sensor fusion with a moisture band using 
+dry and wet thresholds, safety cuts, and data logging.  
+• Norwegian and English UXLCD interface and menus with two -button navigation.  
+• Power & SustainabilitySleep mode strategy, choice of battery, optional solar input, 
+material selection.  
+• Mechanical DesignPrinted housing that hides the reservoir and pipe, seals and 
+mounts for the plate, pump and servo.  
+10) What does a first prototype require?  
+• Arduino board with analog input and digital outputs  
+• Capacitive Soil Moisture Sensor  
+• DHT11 Temperature and Humidity Sensor  
+• Real-time clock module  
+• Mini pump with relay controller or MOSFET and flyback protection  
+• Small servo for a pinch valve  
+• 16-by-2 LCD and two pushbuttons  
+• 18650 cell and single load plate  
+
+• Breadboard Wiring and Vinyl Tubing  
+• PLA or PETG test housing for adjustment and routing  
+•  
+11) What is the shortest path to a tangible prototype?  
+1. Build a breadboard with Arduino, soil sensor, and pump. Implement a simple dry and wet 
+threshold with hysteresis to prevent rapid changeovers.  
+2. Add DHT11 and adjust the watering decision using temperature and humidity.  
+3. Integrate real -time clock for timestamps and an optional watering window.  
+4. Add the LCD screen and two buttons.  
+ 
